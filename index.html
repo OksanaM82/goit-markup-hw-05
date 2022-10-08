@@ -15,10 +15,10 @@
     <header class="header">
       <div class="container header-container">
         <nav class="site-nav">
-        <a href="./index.html" class="logo">Web<span class="logo-studio">Studio</span>
+        <a   href="./index.html" class="logo">Web<span class="logo-studio">Studio</span>
         </a>
         <ul class="site-nav-list">
-          <li class="site-nav-item">
+          <li class="site-nav-item box-studio">
             <a href="./index.html" class="link nav-link link current">Студія</a>
           </li>
           <li class="site-nav-item">
@@ -53,7 +53,7 @@
       <section class="hero" >
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="hero-button">Замовити послугу</button>
+        <button class="hero-button" data-modal-open type="button" >Замовити послугу</button>
         </div>
         <!-- Наші цінності -->
         
@@ -116,20 +116,37 @@
         <div class="container ">
           <h2 class="section-title">Чим ми займаємося</h2>
         <ul class="list projects-list">
-          <li class="projects-item">
-            <img src="./img/websites.jpg" alt="Створення веб сайтів" width="370" height="294" />
+          <li class="projects-item ">
+            <div class="box-desctop-img">
+              <img src="./img/websites.jpg" alt="Створення веб сайтів" width="370" height="294" />
+              <div class=" box-projects box-desctop">
+                <p class="box-projects-item">Десктопні додатки</p>
+              </div>
+            </div>
+            
           </li>
-          <li class="projects-item">
-            <img
+          <li class="projects-item box-mobil-list">
+            <div class="box-mobil-img">
+              <img
               src="./img/applications.jpg"
               alt="Створення мобільних додатків"
               width="370"
               height="294"
             />
+            <div class="box-projects box-mobil">
+<p class="box-projects-item"> Мобільні додатки</p>
+            </div>
+           
+            </div>
           </li>
           <li class="projects-item">
-            <img src="./img/games.jpg" alt="Створення ігор" width="370" height="294" />
-          </li>
+            <div class="box-design-img"><img src="./img/games.jpg" alt="Створення ігор" width="370" height="294" />
+  
+            <div class="box-projects box-design">
+              <p class="box-projects-item"> Дизайнерські рішення</p>
+            </div> 
+          </div>
+          </li>    
         </ul>
         </div>
         
@@ -395,5 +412,15 @@
       </div>
     </div>
     </footer>
+  
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn" data-modal-close>
+          <svg class="modal-icone" width="18" height="18" > <use href="./img/symbol-defs.svg#icon-close"> </use></svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
+  
 </html>
