@@ -127,6 +127,7 @@ margin-bottom: 25px;
 .site-nav .nav-link:hover,
 .site-nav .nav-link:focus {
     color: var(--accent-text-color);}
+    
     .box-studio::after {
         display: block;
         content: "";
@@ -268,47 +269,28 @@ color: var(--title-text-color)
         justify-content: center;
     }
     .projects-item{width: calc(100%-60px)/3;}
-    .box-desctop-img {
-        position: relative;
-    }
+    
     .box-projects {
+        position: relative;
+        
+        
+    }
+    .box-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
         width: 100%;
         height: 70px;
         background-color: var(--box-projects-color);
         bottom: 0 ;
-        left: 0;
-        
-    }
-    .box-projects-item {
-        padding-top: 27px;
 font-weight: 700;
-font-size: 14px;
 line-height: 1.14;
 text-align: center;
 text-transform: uppercase;
-color: var(--hero-text-color);
+color: var(--hero-text-color);}
 
-    }
     
-    .box-desctop {
-        position: absolute;
-       
-    }
-    
-    .box-mobil-img {
-        position: relative;
-    }
-    .box-mobil {
-        position: absolute;
-        
-    }
-    .box-design-img {
-        position: relative;
-    }
-    .box-design {
-        position: absolute;
-    
-    }
 
 /* Наша команда */
 
@@ -358,13 +340,7 @@ color: var(--title-text-color)
         align-items: center;
         justify-content: center;
         color: var(--soc-link-color);
-        transition: color var(--time-function);
-        transition: background-color var(--time-function);
-
-}
-        
-
-    
+        transition: color var(--time-function), background-color var(--time-function);}
     .people-soc-link:hover,
     .people-soc-link:focus
      { background-color: var(--accent-text-color);
@@ -382,7 +358,7 @@ color: var(--title-text-color)
         align-items: center;
         justify-content: center;
     color: var(--clients-border);
-    transition: color var(--time-function);
+    transition: color var(--time-function), border-color var(--time-function);
 }
 
         .clients-list {
@@ -521,13 +497,19 @@ text-align: center;
 color: var(--title-text-color);
 background-color: var(--button-background-color);
 letter-spacing: 0.03em;
-transition: box-shaow var(--time-function);
+transition:  box-shadow var(--time-function), background-color var(--time-function), color var(--time-function);
 
 
         }
         .portfolio-btn:hover,
         .portfolio-btn:focus {box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
-            0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);} 
+            0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        background-color: var(--accent-text-color);
+    color: var(--hero-text-color);} 
+    .section-portfolio .portfolio-btn:hover,
+    
+        .section-portfolio .portfolio-btn:focus {background-color: var(--button-hero-focus-color);
+              color: var(--hero-text-color);}
         
         .portfolio-list{
             display: flex;
@@ -542,21 +524,22 @@ transition: box-shaow var(--time-function);
         padding: 20px 24px;
         border: 1px solid  var(--card-border-color);
         border-top: 0px;
-  } .card-link:hover,
+  }
+.card-link {
+    display: block;
+    transition: box-shadow var(--time-function), ;
+}
+  .card-link:hover,
     .card-link:focus {
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
              0px 4px 4px rgba(0, 0, 0, 0.06), 
              1px 4px 6px rgba(0, 0, 0, 0.16);
 
-              transform: translateY(0%);
-                transition: transform 300mc linear;
+                
         }
 
        
-        .section-portfolio .portfolio-btn:hover,
-    
-        .section-portfolio .portfolio-btn:focus {background-color: var(--button-hero-focus-color);
-              color: var(--hero-text-color);}
+        
 
               .portfolio-titel {
                 font-weight: 700;
@@ -584,8 +567,8 @@ font-size: 18px;
 line-height: 1.56;
 color: var(--hero-text-color);
 transform: translateY(100%);
-                    transition: transform
-                 var(--time-function)
+                    transition:
+                 var(--time-function);
 
             }
             .box-gallery {
