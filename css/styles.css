@@ -402,9 +402,11 @@ color: var(--title-text-color)
         font-weight: 400;
         font-size: 14px;
         line-height: 1.71; 
-        color: #FFFFFF;  }
+        color: #FFFFFF; 
+        transition: var(--time-function)
+    }
         .nav-list{ margin-bottom: 60px;
-            transition: color var(--time-function);
+            
         }
         .footer .link-address:hover,
             .footer .link-address:focus {color: var(--accent-text-color);}
@@ -415,7 +417,7 @@ font-size: 14px;
 line-height: 1.71;
 
 color: var(--footer-contacts-color);
-transition:color var(--time-function);
+transition: var(--time-function);
 }
 .link-contacts:last-child{margin-bottom: 0px;}
 .footer .link-contacts:hover,
@@ -527,7 +529,7 @@ transition:  box-shadow var(--time-function), background-color var(--time-functi
   }
 .card-link {
     display: block;
-    transition: box-shadow var(--time-function), ;
+    transition: box-shadow var(--time-function) ;
 }
   .card-link:hover,
     .card-link:focus {
